@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+    .title-container {
+        width: 100%;
+        height: 100px;
+        background-color: #39466d;
+        padding: 30px 60px;
+    }
+
+    .title-txt {
+        font-size: 30px;
+        color: #fff;
+    }
+}

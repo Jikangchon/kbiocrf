@@ -1,0 +1,23 @@
+@media screen and (min-width: 769px) {
+    .float {
+        float: left;
+    }
+
+    .navbar {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 500;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .float {
+        float: left;
+    }
+
+    .navbar {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 500;
+    }
+
+}

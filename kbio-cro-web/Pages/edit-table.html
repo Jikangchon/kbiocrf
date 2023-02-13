@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../CSS/basic.css">
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../CSS/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 769px)" href="../CSS/desktop.css">
+    <!-- Js only -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <title>KBIO CRF | 편집모드</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg bg-light shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand navbar" href="../index.html">
+                    <img src="/images/kbio-icon.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    KBIO Solutions
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav float">
+                        <li class="nav-item"><a class="nav-link" href="/Pages/info.html">연구자 정보</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Pages/crf.html">Case Report Form</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="title-container">
+            <h1 class="title-txt">CRF 편집 모드</h1>
+        </div>
+
+        <div class="ed-d-bar">
+            <h1 class="ed-title">Case Report Form 수정하기</h1>
+            <h2 class="ed-description">* 아래 체크박스를 체크 완료 후 하단에 'Submit' 버튼을 누르시면 데이터가 저장됩니다.</h2>
+        </div>
+
+        <div class="table-block">
+            <table class="table1">
+                <tbody class="main-tbody">
+                    <tr class="main-tr">
+                        <th colspan="2" class="main-td">임상시험 일정표</th>
+                        <th class="screening">스크리닝</th>
+                        <th colspan="2" class="main-td">시술일</th>
+                        <th colspan="2" class="main-td">회복기간</th>
+                        <th colspan="3" class="main-td">추적관찰기간</th>
+                    </tr>
+                </tbody>
+                <tbody class="sub-tbody">
+                    <tr class="sub-tr">
+                        <th colspan="2" class="sub-row">방문</th>
+                        <td class="sub-screening sub-td">Visit 1</td>
+                        <td class="sub-td">Visit 2</td>
+                        <td class="sub-td">Visit 3</td>
+                        <td class="sub-td">Visit 4</td>
+                        <td class="sub-td">Visit 5</td>
+                        <td class="sub-td">Visit 6</td>
+                        <td class="sub-td">Visit 7</td>
+                        <td class="sub-td">Visit 8</td>
+                    </tr>
+                    <tr class="sub-tr">
+                        <th colspan="2" rowspan="2" class="sub-row">경과일수</th>
+                        <td rowspan="2" class="sub-td">7일 - 0일</td>
+                        <td colspan="2" class="sub-td">0일' (Baseline)</td>
+                        <td rowspan="2" class="sub-td">1일</td>
+                        <td rowspan="2" class="sub-td">7일</td>
+                        <td rowspan="2" class="sub-td">30일</td>
+                        <td rowspan="2" class="sub-td">12주</td>
+                        <td rowspan="2" class="sub-td">24주</td>
+                    </tr>
+                    <tr class="sub-tr">
+                        <td class="sub-td">(B0)</td>
+                        <td class="sub-td">시술 후 4시간 (B1)</td>
+                    </tr>
+                    <tr class="sub-tr">
+                        <th colspan="2" class="sub-row">Visit Window</th>
+                        <td class="sub-td">-</td>
+                        <td class="sub-td">-</td>
+                        <td class="sub-td">+1시간</td>
+                        <td class="sub-td">+1일</td>
+                        <td class="sub-td">+5일</td>
+                        <td class="sub-td">+7일</td>
+                        <td class="sub-td">+14일</td>
+                        <td class="sub-td">+30일</td>
+                    </tr>
+                </tbody>
+                <tbody class="main-tbody2">
+                    <tr class="main-tr">
+                        <th colspan="2" class="main-td2">관찰형태</th>
+                        <th class="screening">내원/입원</th>
+                        <th class="main-td2">입원</th>
+                        <th class="main-td2">입원</th>
+                        <th class="main-td2">입원</th>
+                        <th class="main-td2">입원/내원</th>
+                        <th class="main-td2">내원</th>
+                        <th class="main-td2">내원</th>
+                        <th class="main-td2">내원/유선</th>
+                    </tr>
+                </tbody>
+                <tbody class="bottom-tbody">
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">대상자 설명문 및 동의서</th>
+                        <td class="bottom-td">
+                            <form method="post" class="checkbox-form" target="_top"
+                                name="chk-info" action="/chkbox.js">
+                                <label for="checkbox-label"><input type="checkbox" name="chk_info" value="result" placeholder="check" id="checkbox">완료</label>
+                                <!-- <label for="checkbox-name"><span>완료</span></label> -->
+                            </form>
+                        </td>
+                        <td class="bottom-td">
+                            <form method="post" class="checkbox-form" target="_top"
+                                name="chk-info" action="/chkbox.js">
+                                <label for="checkbox-label"><input type="checkbox" name="chk_info" onchange="chkbox(this);" value="result" placeholder="check" id="checkbox">완료</label>
+                                <!-- <label for="checkbox-name"><span>완료</span></label> -->
+                            </form>
+                        </td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">스크리닝 번호 부여</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">선정/제외기준</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">인구학적 조사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">RU</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">활력징후</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">신체검사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">병력/수술/시술력</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">선행약물</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">임신검사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-colspan bottom-row">KPS 평가</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th rowspan="6" class="bottom-row">실험실적 검사</th>
+                        <th class="bottom-row">일반 혈액 검사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th class="bottom-row">혈청 생화학적 검사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th class="bottom-row">염증 반응 검사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th class="bottom-row">췌장 기능 검사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th class="bottom-row">혈액응고 검사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="1" class="bottom-row">뇨 검사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">ERCP 검사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">무작위배정 번호 부여</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">ERCP 중재시술</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">복부 X 선 검사</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">스텐트 폐색 여부 확인 (CT 또는 ERCP)</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">기술적 성공</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">임상적 성공 (Bilirubin)</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">생존율/생존 여부 확인</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">합병증 확인</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">이상사례/중대한 이상사례</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                    <tr class="bottom-tr">
+                        <th colspan="2" class="bottom-row">병용요법</th>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                        <td class="bottom-td"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mark-bg m-bg2">
+            <div class="mark-title">
+                <form action="/chkbox.js">
+                    <button type="button" value="innerText()" onclick="show()" id="edit-btn2">저장하기</button>
+                    <button type="button" value="Reset" onclick="show()" id="edit-btn2">초기화</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- <td>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            Default checkbox
+        </label>
+    </td> -->
+
+
+
+    <script src="/chkbox.js"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <footer class="footer">
+        <div class="f-grid1 float">
+            <a href="../index.html" class="logo-link">
+                <img src="../images/kbio-whiteLogo.png" alt="KBIO White Logo" width="300">
+            </a>
+
+            <p class="f-p1">
+                &copy; Copyright <a href="http://kbiotechsolutions.com" class="copyright-link">KBIO Solutions</a> All right reserved.
+            </p>
+        </div>
+        <div class="f-grid2 float">
+
+        </div>
+    </footer>
+</body>
+</html>
