@@ -1,4 +1,4 @@
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
     .title-container {
         width: 100%;
         height: 100px;
@@ -370,4 +370,9 @@
         padding: 3px 10px;
     }
 
+
+    /* Hide Toggle btn */
+    .toggle-menu, .side_menu {
+        visibility: hidden;
+    }
 }
